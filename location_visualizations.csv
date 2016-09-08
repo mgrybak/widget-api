@@ -1,0 +1,45 @@
+description,name,vid,premium_source,api_topic,package
+Demographic Overview,demographic_overview,jntCq6oYdvf,Maponics^,places,location
+Age Distribution,age_distribution,bP3sv9TMVQp,Maponics^,places,location
+Ethnic Distribution,ethnic_distribution,94IFNUggE9n,Maponics^,places,location
+Educational Attainment,educational_attainment,KonbwcRUVv,Maponics^,places,location
+Languages Spoken,languages_spoken,ezofcpxjdxr,Maponics^,places,location
+Marital Status,marital_status,iwfncAoffIV,Maponics^,places,location
+Family Size,family_size,7wUepzQa6WN,Maponics^,places,location
+Hispanic and Latino Statistics,hispanic_and_latino_statistics,k43OAUOlMVv,Maponics^,places,location
+Gender Breakdown,gender_breakdown,3A36poZe4Lj,Maponics^,places,location
+Homeownership Overview,homeownership_overview,dSO31B7VE7b,Maponics^,places,location
+Homeownership Breakdown,homeownership_breakdown,ahf16PtGoDP,Maponics^,places,location
+Monthly Rent,monthly_rent,j5CNokCNmcd,Maponics^,places,location
+Monthly Ownership Costs,monthly_ownership_costs,lgA9TQ1LxpX,Maponics^,places,location
+Household Income,household_income,d1zNO57cGkR,Maponics^,places,location
+Fuel Usage,fuel_usage,fLUAvkKIY1T,Maponics^,places,location
+Religious Organizations,religious_organizations,h69VZrBjs2x,Maponics^,places,location
+Cost of Living,cost_of_living,aejYfjvvJNX,,places,location
+Population Over Time,population_over_time,f9GodfsiPEp,,places,location
+Yoga Studio Density,yoga_studio_density,8U4CLcEVfNj,Dun&Bradstreet,places,location
+Restaurant Density,restaurant_density,jTpLydd0ozr,Dun&Bradstreet,places,location
+Cafe Density,cafe_density,3pp3mHnSGpf,Dun&Bradstreet,places,location
+Bar Density,bar_density,eoKc9HVXPbn,Dun&Bradstreet,places,location
+Religious Organization Density,religious_organization_density,8duqAofxGn3,Dun&Bradstreet,places,location
+Fitness Center Density,fitness_center_density,jcPznoNCP9b,Dun&Bradstreet,places,location
+Vice Density,vice_density,2IORbSYv6YZ,Dun&Bradstreet,places,location
+Alternative Medicine Density,alternative_medicine_density,dI9ZYTwAfL7,Dun&Bradstreet,places,location
+Transportation Overview,transportation_overview,b8tgklupmq9,Maponics^,places,location
+Commute Method,commute_method,69JQ3X1oY6h,Maponics^,places,location
+Commute Departure Time,commute_departure_time,bEppssirxul,Maponics^,places,location
+Avilable Vehicles,avilable_vehicles,2l86LwYalD,Maponics^,places,location
+Commute Time,commute_time,h94YQXzu6Sp,Maponics^,places,location
+Real Estate Market Trends Overview,real_estate_market_trends_overview,l4t8WUOJMWx,CoreLogic,places,location
+Home Price Index,home_price_index,6Zv7nfqrzLf,CoreLogic,places,location
+Foreclosure Prevalence,foreclosure_prevalence,b70iq7SJ0iN,CoreLogic,places,location
+REO Market,reo_market,2RZWkmYa9dH,CoreLogic,places,location
+Negative Equity Prevalence,negative_equity_prevalence,iFqsl4nUhXD,CoreLogic,places,location
+Home Sales,home_sales,OflNVK1qWV,CoreLogic,places,location
+Weather Summary,weather_summary,2yA1JDwMn1H,,places,location
+Average Temperature,average_temperature,eL6LwmweIWp,,places,location
+Average Precipitation,average_precipitation,cXkfyYH76cJ,,places,location
+Average Snowfall,average_snowfall,asihJZeEroF,,places,location
+Nearby Schools,nearby_schools,iTCt4c58VKd,,places,location
+Nearby Public Schools,nearby_public,kgMRpOTU4AJ,,places,location
+Nearby Private Schools,nearby_private,g9hGmWrCE3b,,places,location
