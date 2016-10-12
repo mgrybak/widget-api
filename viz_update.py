@@ -8,11 +8,10 @@ Default: Title (no), Footer (no), Native (yes), Share (no), Sources (yes)
 To Do:
 - Change from save_widget to GIQ Widget API for forking + new widget issuance
 - Use Ultron to grab information from API package topic
-- Use PAPI imports to push into Prog-API topic and Onboarding Tracker topic
+- Use PAPI delete step to
 '''
 
-import sys, requests, json, csv
-from datetime import datetime
+import sys, requests, json, csv, time
 
 
 '''
@@ -24,10 +23,14 @@ VIZ_API_TOKEN = '56cce9e2c44bdb48410000017f508c60058d4ff46d13216f386de51b'
 VIZ_HEIGHT = 500
 VIZ_WIDTH = 700
 HEADERS = {'user-agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'}
+PROG_API_APP_ID = 6876
+TRACKER_APP_ID = 11738
 PUBLISHER = 'Onboarding-Demo'
 PID = '404'
 STANDARD_STYLE = 'font:14px/16px arial;color:#339933;'
 STANDARD_ANCHOR = 'More Details | FindTheHome'
+IMPORT_URL = "https://www.findthebest.com:443/API/v1/app/{0}/import"
+IMPORT_TOKEN = "a815742ae8012732856fb231f0591899"
 
 def openCSV(csv_file):
     with open(csv_file,'rb') as input_csv:
@@ -66,12 +69,23 @@ def formatEmbedCode(embed):
     return no_href_code
 
 
-def sendToTracker(viz_output):
+def sendToTopic(import_data, app_id):
+    headers = {
+    'token': IMPORT_TOKEN
+    }
+    payload = {'data': json.dumps(import_data)}
+    try:
+        response = requests.request("POST", IMPORT_URL.format(app_id), data=payload, headers=headers)
+        print response.text
+    except requests.exceptions.RequestException as e:
+        print e
+        sys.exit(1)
 
 
 def main():
     viz_rows = openCSV(sys.argv[1])
     tracker_import = []
+    prog_api_import = []
     for viz in viz_rows:
         if 'card_id' in getVizInfo(viz).keys():
             viz_info = getVizInfo(viz)
@@ -79,13 +93,16 @@ def main():
             viz['app_id'] = viz_info['app_id']
             viz['listing_id'] = viz_info['listing_ids'][0]
             new_widget_response = sendVizRequest(viz)
-            #viz_output = [viz['name'], new_widget_response['id']]
-            #print ','.join(map(lambda x: str(x),viz_output))
-            to_tracker = {"title":viz['description'],"widget_name":viz['name'],"widget_id":new_widget_response['id'],"publisher":PUBLISHER,"pid":PID,"json_widget_options":'{"type":"' + viz['api_topic'] + '", "add-ad-tag":false}',"style":STANDARD_STYLE,"anchor_text":STANDARD_ANCHOR,"date_issued":datetime.now(),"status":'current'}
+            to_tracker = {"title":viz['description'],"widget_name":viz['name'],"widget_id":new_widget_response['id'],"publisher":PUBLISHER,"pid":PID,"json_widget_options":'{"type":"' + viz['api_topic'] + '", "add-ad-tag":false}',"style":STANDARD_STYLE,"anchor_text":STANDARD_ANCHOR,"date_issued":time.strftime('%Y-%m-%d %H:%M:%S'),"status":'current'}
             tracker_import.append(to_tracker)
+            to_prog = {"title":viz['description'],"widget_name":viz['name'],"widget_id":new_widget_response['id'],"publisher":PUBLISHER,"pid":PID,"json_widget_options":'{"type":"' + viz['api_topic'] + '", "add-ad-tag":false}',"style":STANDARD_STYLE,"anchor_text":STANDARD_ANCHOR}
+            prog_api_import.append(to_prog)
+            print "Successfully added new visualization for", viz['name']
         else:
+            print "Error forking visualization for", viz['name']
             continue
-    print tracker_import
+    sendToTopic(tracker_import,11738)
+    sendToTopic(prog_api_import,6876)
 
 if __name__ == "__main__":
     main()
