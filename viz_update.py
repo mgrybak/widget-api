@@ -17,16 +17,20 @@ import sys, requests, json, csv, time
 '''
 GLOBALS
 '''
-SW_URL_TEMPLATE = 'https://www.graphiq.com/w/ajax/save_widget?app_id={5}&options={{"wid":"{0}","type":"card","w":{1},"h":{2},"limit":100,"ids":["{3}"],"autogeo":false,"autohide_info":false,"initial_slide":true,"rcq":false,"u_ratings":false,"show_sources":true,"u_reviews":false,"app_id":{5},"source":"Card Editor","single_widget_mode":true,"card_id":{4},"context":"SINGLE","theme":"native","no_share":true,"show_footer":false,"show_header":false,"freeze":false}}&custom_attributes={{}}&embed_type=1'
+SW_URL_TEMPLATE = 'https://www.graphiq.com/w/ajax/save_widget?app_id={5}&options={{"wid":"{0}","type":"card","title":"","dir_name":"","dir_url":"",\
+"publisher_id":"","amazon_id":"","w":{1},"h":{2},"limit":100,"field":"","fields":[],"link_color":"","ids":["{3}"],"filters":[],"filter_by":[],"autogeo":false,\
+"autohide_info":false,"initial_slide":true,"rcq":false,"sort_field":"","sort_dir":"","app_id":{5},"source":"Card Editor","single_widget_mode":true,"card_id":{4},\
+"context":"SINGLE","freeze_frequency":"","freeze_date":"","freeze":false,"theme":"native","show_header":false,"show_footer":false,"show_sources":false,"global_no_links":true,"no_share":true,\
+"backlink":false}}&custom_attributes={{}}&embed_type=1&source=api'
 VIZ_API_URL = 'http://api.graphiq.com/visualizations/'
 VIZ_API_TOKEN = '56cce9e2c44bdb48410000017f508c60058d4ff46d13216f386de51b'
 VIZ_HEIGHT = 500
-VIZ_WIDTH = 700
+VIZ_WIDTH = '"100%"'
 HEADERS = {'user-agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'}
 PROG_API_APP_ID = 6876
 TRACKER_APP_ID = 11738
-PUBLISHER = 'Onboarding-Demo'
-PID = '404'
+PUBLISHER = 'realistiq_test'
+PID = '414'
 STANDARD_STYLE = 'font:14px/16px arial;color:#339933;'
 STANDARD_ANCHOR = 'More Details | FindTheHome'
 IMPORT_URL = "https://www.findthebest.com:443/API/v1/app/{0}/import"
