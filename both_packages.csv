@@ -43,6 +43,12 @@ Average Snowfall,average_snowfall,asihJZeEroF,,places,location
 Nearby Schools,nearby_schools,iTCt4c58VKd,,places,location
 Nearby Public Schools,nearby_public,kgMRpOTU4AJ,,places,location
 Nearby Private Schools,nearby_private,g9hGmWrCE3b,,places,location
+Building Details,building_details,2PSBGhnInR3,CoreLogic^,homes,property
+Tax Details,tax_details,kazSYdUaYzH,CoreLogic^,homes,property
+Recent Sales and Transactions,recent_sales_and_transactions,lNIlSU7XcXj,CoreLogic^,homes,property
+Lot and Land Details,lot_and_land_details,iGTqfhZAE4Z,CoreLogic^,homes,property
+Estimated Value,estimated_value,cHtKzDcFo5T,CoreLogic^,homes,property
+Natural Disaster Risk,natural_disaster_risk,lXam4Er96Qd,CoreLogic^,homes,property
 Demographic Overview,demographic_overview,dvGoq8THAcl,Maponics^,places,location
 Age Distribution,age_distribution,6iykABBd5fD,Maponics^,places,location
 Ethnic Distribution,ethnic_distribution,leKBnN0egdf,Maponics^,places,location
