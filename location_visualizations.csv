@@ -1,20 +1,5 @@
 description,name,vid,premium_source,api_topic,package
-Demographic Overview,demographic_overview,jntCq6oYdvf,,places,location
-Age Distribution,age_distribution,bP3sv9TMVQp,,places,location
-Ethnic Distribution,ethnic_distribution,94IFNUggE9n,,places,location
-Educational Attainment,educational_attainment,KonbwcRUVv,,places,location
-Languages Spoken,languages_spoken,ezofcpxjdxr,,places,location
-Marital Status,marital_status,iwfncAoffIV,,places,location
-Family Size,family_size,7wUepzQa6WN,,places,location
-Hispanic and Latino Statistics,hispanic_and_latino_statistics,k43OAUOlMVv,,places,location
-Gender Breakdown,gender_breakdown,3A36poZe4Lj,,places,location
-Homeownership Overview,homeownership_overview,dSO31B7VE7b,,places,location
-Homeownership Breakdown,homeownership_breakdown,ahf16PtGoDP,,places,location
-Monthly Rent,monthly_rent,j5CNokCNmcd,,places,location
-Monthly Ownership Costs,monthly_ownership_costs,lgA9TQ1LxpX,,places,location
-Household Income,household_income,d1zNO57cGkR,,places,location
-Fuel Usage,fuel_usage,fLUAvkKIY1T,,places,location
-Religious Organizations,religious_organizations,h69VZrBjs2x,,places,location
+Religious Organizations,religious_organizations,,,places,location
 Cost of Living,cost_of_living,aejYfjvvJNX,,places,location
 Population Over Time,population_over_time,f9GodfsiPEp,,places,location
 Yoga Studio Density,yoga_studio_density,8U4CLcEVfNj,Dun&Bradstreet^,places,location
@@ -25,11 +10,6 @@ Religious Organization Density,religious_organization_density,8duqAofxGn3,Dun&Br
 Fitness Center Density,fitness_center_density,jcPznoNCP9b,Dun&Bradstreet^,places,location
 Vice Density,vice_density,2IORbSYv6YZ,Dun&Bradstreet^,places,location
 Alternative Medicine Density,alternative_medicine_density,dI9ZYTwAfL7,Dun&Bradstreet^,places,location
-Transportation Overview,transportation_overview,b8tgklupmq9,,places,location
-Commute Method,commute_method,69JQ3X1oY6h,,places,location
-Commute Departure Time,commute_departure_time,bEppssirxul,,places,location
-Avilable Vehicles,avilable_vehicles,2l86LwYalD,,places,location
-Commute Time,commute_time,h94YQXzu6Sp,,places,location
 Real Estate Market Trends Overview,real_estate_market_trends_overview,l4t8WUOJMWx,CoreLogic^,places,location
 Home Price Index,home_price_index,6Zv7nfqrzLf,CoreLogic^,places,location
 Foreclosure Prevalence,foreclosure_prevalence,b70iq7SJ0iN,CoreLogic^,places,location
