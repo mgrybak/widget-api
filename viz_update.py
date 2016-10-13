@@ -105,18 +105,8 @@ def main():
         else:
             print "Error forking visualization for", viz['name']
             continue
-    try:
-        sendToTopic(tracker_import,11738)
-        print "Successful import into Onboarding Tracker topic"
-    except:
-        print "Error updating Onboarding Tracker topic. Please fix and try again."
-        sys.exit(1)
-    try:
-        sendToTopic(prog_api_import,6876)
-        print "Successful import into Prog API topic"
-    except:
-        print "Error updating Prog API topic. Please fix and try again."
-        sys.exit(1)
+    sendToTopic(tracker_import,11738)
+    sendToTopic(prog_api_import,6876)
 
 
 if __name__ == "__main__":
