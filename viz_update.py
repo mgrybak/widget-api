@@ -97,7 +97,7 @@ def main():
             viz['app_id'] = viz_info['app_id']
             viz['listing_id'] = viz_info['listing_ids'][0]
             new_widget_response = sendVizRequest(viz)
-            to_tracker = {"title":viz['description'],"widget_name":viz['name'],"widget_id":new_widget_response['id'],"publisher":PUBLISHER,"pid":PID,"json_widget_options":'{"type":"' + viz['api_topic'] + '", "add-ad-tag":false}',"style":STANDARD_STYLE,"anchor_text":STANDARD_ANCHOR,"date_issued":time.strftime('%Y-%m-%d %H:%M:%S'),"status":'current'}
+            to_tracker = {"title":viz['description'],"widget_name":viz['name'],"widget_id":new_widget_response['id'],"publisher":PUBLISHER,"pid":PID,"json_widget_options":'{"type":"' + viz['api_topic'] + '", "add-ad-tag":false}',"style":STANDARD_STYLE,"anchor_text":STANDARD_ANCHOR,"date_issued":time.strftime('%Y-%m-%d %H:%M:%S'),"status":'current',"template_widget_id":viz['vid']}
             tracker_import.append(to_tracker)
             to_prog = {"title":viz['description'],"widget_name":viz['name'],"widget_id":new_widget_response['id'],"publisher":PUBLISHER,"pid":PID,"json_widget_options":'{"type":"' + viz['api_topic'] + '", "add-ad-tag":false}',"style":STANDARD_STYLE,"anchor_text":STANDARD_ANCHOR}
             prog_api_import.append(to_prog)
