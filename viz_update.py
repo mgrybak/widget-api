@@ -11,7 +11,7 @@ To Do:
 - Use PAPI delete step to
 '''
 
-import sys, requests, json, csv, time
+import sys, requests, json, csv, time, creds
 
 
 '''
@@ -34,7 +34,7 @@ PID = '414'
 STANDARD_STYLE = 'font:14px/16px arial;color:#339933;'
 STANDARD_ANCHOR = 'More Details | FindTheHome'
 IMPORT_URL = "https://www.findthebest.com:443/API/v1/app/{0}/import"
-IMPORT_TOKEN = "a815742ae8012732856fb231f0591899"
+IMPORT_TOKEN = creds.import_token
 
 def openCSV(csv_file):
     with open(csv_file,'rb') as input_csv:
