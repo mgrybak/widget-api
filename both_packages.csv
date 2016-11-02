@@ -70,3 +70,6 @@ Commute Method,commute_method,hiyJ4pnfGFT,,places,location
 Commute Departure Time,commute_departure_time,8SUjVWRlreJ,,places,location
 Avilable Vehicles,avilable_vehicles,i9MYhVnYEsd,,places,location
 Commute Time,commute_time,5Nhr9i18mPz,,places,location
+All Schools,schools_saz,4dzclSF0mnH,,homes,property
+Public Schools,pub_schools_saz,641j0cIVQ9,,homes,property
+Private Schools,priv_schools_saz,eb22SFB191r,,homes,property
