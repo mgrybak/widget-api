@@ -19,14 +19,23 @@
 <div id="register-name" class="container">
   <div class="well well-md">
     <h4><b>Start by entering the name of the organization you wish to register with the Graphiq API</b></h4>
-    <div class="container">
-      <form class="form-horizontal">
-        <div class="col-md-5">
-          <input type="text" class="form-control" id="usr" placeholder="Enter organization name">
-        </div>
-      </form>
-      <button type="button" class="btn btn-primary">Check Name Availability</button>
+      <div class="container">
+        <div class="col-sm-6">
+        <form>
+          <div class="form-group">
+            <label for="usr">Organization Name</label>
+            <input type="text" class="form-control" id="usr">
+          </div>
+          <div class="form-group">
+            <label for="url">Domain URL</label>
+            <input type="text" class="form-control" id="url">
+          </div>
+        </form>
+      </div>
     </div>
+    <div class="container row">
+        <button type="button" class="btn btn-primary">Check Name Availability</button>
+      </div>
   </div>
 </div>
 
