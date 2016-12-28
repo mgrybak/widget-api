@@ -53,7 +53,9 @@ $data = array("organization_name" => $org_name,
               "native_integration" => $native_integration,
               "footer" => $footer,
               "sources" => $sources,
-              "share" => $share);
+              "share" => $share,
+	      "status" => "Submitted",
+	      "reviewed" => "N");
 
 $data_string = json_encode($data);
 
@@ -71,7 +73,7 @@ curl_setopt_array($curl, array(
   CURLOPT_USERAGENT => $useragent,
   CURLOPT_HTTPHEADER => array(
     "content-type: multipart/form-data",
-    "token: 4cfb5a9ab0b0492f0d5aada5b4ac7300"
+    "token: 021db13568dc101bf462a67884dbf685"
   )
 ));
 

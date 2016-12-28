@@ -17,22 +17,12 @@ import sys, requests, json, csv, time, creds
 '''
 GLOBALS
 '''
-SW_URL_TEMPLATE = 'https://www.graphiq.com/w/ajax/save_widget?app_id={5}&options={{"wid":"{0}","type":"card","title":"","dir_name":"","dir_url":"",\
-"publisher_id":"","amazon_id":"","w":{1},"h":{2},"limit":100,"field":"","fields":[],"link_color":"","ids":["{3}"],"filters":[],"filter_by":[],"autogeo":false,\
-"autohide_info":false,"initial_slide":true,"rcq":false,"sort_field":"","sort_dir":"","app_id":{5},"source":"Card Editor","single_widget_mode":true,"card_id":{4},\
-"context":"SINGLE","freeze_frequency":"","freeze_date":"","freeze":false,"theme":"native","show_header":false,"show_footer":false,"show_sources":true,"global_no_links":true,"no_share":true,\
-"backlink":false}}&custom_attributes={{}}&embed_type=1&source=api'
+SW_URL_TEMPLATE = 'https://www.graphiq.com/w/ajax/save_widget?app_id={0}&options={1}&custom_attributes={{}}&embed_type=1&source=api'
 VIZ_API_URL = 'http://api.graphiq.com/visualizations/'
 VIZ_API_TOKEN = '56cce9e2c44bdb48410000017f508c60058d4ff46d13216f386de51b'
-VIZ_HEIGHT = 500
-VIZ_WIDTH = '"100%"'
 HEADERS = {'user-agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'}
 PROG_API_APP_ID = 6876
 TRACKER_APP_ID = 11738
-PUBLISHER = 'buyside'
-PID = '429'
-STANDARD_STYLE = 'font:14px/16px arial;color:#339933;'
-STANDARD_ANCHOR = 'More Details | FindTheHome'
 IMPORT_URL = "https://www.findthebest.com:443/API/v1/app/{0}/import"
 IMPORT_TOKEN = creds.import_token
 
@@ -43,9 +33,9 @@ def openCSV(csv_file):
         return rows
 
 
-def sendVizRequest(viz):
+def sendVizRequest(app_id,options):
     try:
-        r = requests.get(SW_URL_TEMPLATE.format(viz['vid'], VIZ_WIDTH, VIZ_HEIGHT, viz['listing_id'], viz['card_id'], viz['app_id']), headers=HEADERS)
+        r = requests.get(SW_URL_TEMPLATE.format(app_id,options), headers=HEADERS)
         return json.loads(r.text)
     except requests.exceptions.RequestException as e:
         print e
@@ -102,7 +92,6 @@ def main():
             to_prog = {"title":viz['description'],"widget_name":viz['name'],"widget_id":new_widget_response['id'],"publisher":PUBLISHER,"pid":PID,"json_widget_options":'{"type":"' + viz['api_topic'] + '", "add-ad-tag":false}',"style":STANDARD_STYLE,"anchor_text":STANDARD_ANCHOR}
             prog_api_import.append(to_prog)
             print "Successfully added new visualization for", viz['name']
-	        #print ",".join(map(lambda x: '"' + str(x) + '"', [new_widget_response['id'],viz['description'],viz['name'],viz['vid']]))
         else:
             print "Error forking visualization for", viz['name']
             continue

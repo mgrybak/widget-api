@@ -47,15 +47,15 @@
     <div class="well well-md">
       <h4><b>Specify your visualization package</b></h4>
       <div class="container">
-        <form id="radio" class="form-horizontal">
+        <form id="checks" class="form-horizontal">
           <div class="radio">
-            <label><input type="radio" id="location" name="optradio" value="location">Location</label>
+            <label><input type="checkbox" id="location" name="optcheck" value="location">Location</label>
           </div>
           <div class="radio">
-            <label><input type="radio" id="property" name="optradio" value="property">Property</label>
+            <label><input type="checkbox" id="property" name="optcheck" value="property">Property</label>
           </div>
           <div class="radio">
-            <label><input type="radio" id="both" name="optradio" value="both">Both (Property & Location)</label>
+            <label><input type="checkbox" id="market" name="optcheck" value="market">Market Trends</label>
           </div>
         </form>
       </div>

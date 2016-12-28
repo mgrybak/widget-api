@@ -67,10 +67,10 @@ function handleSubmit(data, user_name){
         var property = false;
     }
 
-    if ($("#both").is(":checked")){
-        var both = true;
+    if ($("#market").is(":checked")){
+        var market = true;
     }else{
-        var both = false;
+        var market = false;
     }
 
     if ($("#title").is(":checked")){
@@ -112,15 +112,15 @@ function handleSubmit(data, user_name){
     
 
     //Choose package
-    if (location == false && property == false && both == false) {
+    if (location == false && property == false && market == false) {
         alert("Please choose a visualization package");
         return;
     }else if(location == true){
         var package_option = "location";
     }else if(property == true){
-        var package_option = "property";
+        var package_option = "^property";
     }else if(both == true){
-        var package_option = "both";
+        var package_option = "^market";
     }
 
     // Conditions

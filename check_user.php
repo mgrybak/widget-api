@@ -18,7 +18,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
-    "token: e6ba237f501f81b49fff3ceed9fec201"
+    "token: 03da11b54a5568b670fe53477560a09e"
   ),
 ));
 
