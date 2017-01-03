@@ -161,5 +161,9 @@ function submitForm(org_name,domain,email,color,package_option,title,native_inte
             if (submission.status = "SCHEDULED"){
                 alert("Thank you, your request for a Graphiq API key has been submitted.");
             }
+            else {
+                alert("There was an error processing your request. Please contact Graphiq.")
+            }
+            window.location.reload(1)
         });
 }
