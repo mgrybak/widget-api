@@ -23,7 +23,7 @@
       <h4><b>Start by entering the name of the organization you wish to register with the Graphiq API</b></h4>
       <div class="row">
         <div class="form-group col-md-6">
-          <label for="usr">Organization Name</label>
+          <label for="usr">Organization Name (25 character max.)</label>
           <input type="text" class="form-control" id="usr" placeholder="Graphiq" value="">
           <span class="" for="usr" aria-hidden="true"></span>
         </div>
@@ -48,17 +48,26 @@
       <h4><b>Specify your visualization package</b></h4>
       <div class="container">
         <form id="checks" class="form-horizontal">
-          <div class="radio">
+          <div class="checkbox">
             <label><input type="checkbox" id="location" name="optcheck" value="location">Location</label>
           </div>
-          <div class="radio">
+          <div class="checkbox">
             <label><input type="checkbox" id="property" name="optcheck" value="property">Property</label>
           </div>
-          <div class="radio">
+          <div class="checkbox">
             <label><input type="checkbox" id="market" name="optcheck" value="market">Market Trends</label>
           </div>
         </form>
-      </div>
+        <form id="custom" class="form-horizontal">
+         <div class="row">
+            <div class="form-group col-md-2">
+              <label for="usr">Custom Package</label>
+              <input type="text" class="form-control" id="custom_form" placeholder="" value="">
+              <span class="" for="usr" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 

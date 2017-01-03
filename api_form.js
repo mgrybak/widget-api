@@ -31,6 +31,9 @@ function handleCheck(data, user_name){
     if (user_name == ""){
         alert("Please enter an organization name");
         return;
+    }else if (user_name.length > 25){
+        alert("Please keep organization name under 25 characters");
+        return;
     }else if (obj.exists == true){
         alert("The name " + user_name + " is already taken.");
         return;
@@ -46,6 +49,9 @@ function handleSubmit(data, user_name){
     if (user_name == ""){
         alert("Please enter an organization name");
         return;
+    }else if (user_name.length > 25){
+        alert("Please keep organization name under 25 characters");
+        return;
     }else if (obj.exists == true){
         alert("The name " + user_name + " is already taken.");
         return;
@@ -54,6 +60,7 @@ function handleSubmit(data, user_name){
     // Storing Field Values In Variables
     var org_name = document.getElementById("usr").value;
     var domain = document.getElementById("url").value;
+    var custom = document.getElementById("custom_form").value;
 
     if ($("#location").is(":checked")){
         var location = true;
@@ -112,15 +119,26 @@ function handleSubmit(data, user_name){
     
 
     //Choose package
+    var package_option = "";
     if (location == false && property == false && market == false) {
         alert("Please choose a visualization package");
         return;
-    }else if(location == true){
-        var package_option = "location";
-    }else if(property == true){
-        var package_option = "^property";
-    }else if(both == true){
-        var package_option = "^market";
+    }
+
+    if(location == true){
+        package_option = package_option + "location";
+    }
+
+    if(property == true){
+        package_option = package_option + "^property";
+    }
+
+    if(market == true){
+        package_option = package_option + "^market";
+    }
+
+    if(custom != ""){
+        package_option = package_option + "^" + custom;
     }
 
     // Conditions

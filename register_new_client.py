@@ -164,7 +164,7 @@ if __name__ == "__main__":
 	        print ",".join(map(lambda x: '"' + str(x) + '"', [new_widget_response['id'],viz['description'],viz['name'],viz['vid']]))
 	    else:
 	        print "Error forking visualization for", viz['name']
-	        continue
+	        sys.exit(1)
 	sendToTopic(tracker_import,11738)
 	sendToTopic(prog_api_import,6876)
 

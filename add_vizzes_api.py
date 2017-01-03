@@ -1,15 +1,5 @@
 __author__ = 'Matthew'
 
-'''
-Takes a csv with the headers "name", and "vid" and generates a csv containing the name and a new forked widget ID with provided specifications.
-Default: Title (no), Footer (no), Native (yes), Share (no), Sources (yes)
-
-
-To Do:
-- Change from save_widget to GIQ Widget API for forking + new widget issuance
-- Use Ultron to grab information from API package topic
-- Use PAPI delete step to
-'''
 
 import sys, requests, json, csv, time, creds
 
