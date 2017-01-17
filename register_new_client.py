@@ -22,13 +22,13 @@ PID = preferences['pid']
 
 
 #VIZ TITLE (HEADER) [True/False]
-if preferences['title'] == True:
+if preferences['title'] == 'true':
 	TITLE = True
 else:
 	TITLE = False
 
 #DISABLE OUTBOUND LINKS [True/False]
-if preferences['disable_links'] == True:
+if preferences['disable_links'] == 'true':
 	DISABLE_ALL_LINKS = True
 else:
 	DISABLE_ALL_LINKS = False
@@ -37,25 +37,25 @@ else:
 VIZ_DESTINATION_LINK = preferences['destination_link']
 
 #NATIVE [True/False]
-if preferences['native'] == True:
+if preferences['native'] == 'true':
 	NATIVE = True
 else:
 	NATIVE = False
 
 #FOOTER [True/False]
-if preferences['show_footer'] == True:
+if preferences['show_footer'] == 'true':
 	FOOTER = True
 else:
 	FOOTER = False
 
 #SOURCES [True/False]
-if preferences['show_sources'] == True:
+if preferences['show_sources'] == 'true':
 	SOURCES = True
 else:
 	SOURCES = False
 
 #SHARE [True/False]
-if preferences['show_share'] == True:
+if preferences['show_share'] == 'true':
 	SHARE = True
 else:
 	SHARE = False
@@ -132,14 +132,16 @@ if SHARE == True:
     options_dict['no_share'] = False
 
 #Publisher ID
-options_dict['publisher_id']
+options_dict['publisher_id'] = PID
 
 
 #-------------------------------------------------#
 
-package_csv = sys.argv[2]
+#package_csv = sys.argv[2]
 
+print options_dict
 
+'''
 if __name__ == "__main__":
 	viz_rows = openCSV(package_csv)
 	tracker_import = []
@@ -167,5 +169,5 @@ if __name__ == "__main__":
 	        sys.exit(1)
 	sendToTopic(tracker_import,11738)
 	sendToTopic(prog_api_import,6876)
-
+'''
 

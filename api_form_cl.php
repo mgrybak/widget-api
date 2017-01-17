@@ -7,13 +7,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="api_form.js"></script>
+  <script src="api_form_cl.js"></script>
 </head>
 <body>
 <div class="container">  
   <div class="jumbotron">
-    <h1>Graphiq API</h1> 
-    <p>The Graphiq API is a turnkey solution for real estate professional seeking to increase engagement on their sites. Get started with the Graphiq API by selecting from the options below.</p> 
+    <h1>Graphiq API</h1>
+    <p>CoreLogic Client Onboarding Form</p> 
   </div>
 </div>
 
@@ -40,34 +40,6 @@
           <button id="check-availability" type="button" class="btn btn-primary">Check Name Availability</button>
         </div>
       </div>  
-    </div>
-  </div>
-
-  <div id="package" class="container">
-    <div class="well well-md">
-      <h4><b>Specify your visualization package</b></h4>
-      <div class="container" id="vizcheck_container">
-        <form id="vizchecks" class="form-horizontal">
-          <div class="checkbox">
-            <label><input type="checkbox" id="location" name="optcheck" value="location">Location</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" id="property" name="optcheck" value="property">Property</label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" id="market" name="optcheck" value="market">Market Trends</label>
-          </div>
-        </form>
-        <form id="custom" class="form-horizontal">
-         <div class="row">
-            <div class="form-group col-md-2">
-              <label for="custom_form">Custom Package</label>
-              <input type="text" class="form-control" id="custom_form" placeholder="" value="">
-              <span class="" for="custom_form" aria-hidden="true"></span>
-            </div>
-          </div>
-        </div>
-      </form>
     </div>
   </div>
 

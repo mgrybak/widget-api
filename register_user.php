@@ -43,6 +43,10 @@ if(isset($_POST['share']))
 {
     $share = $_POST['share'];
 }
+if(isset($_POST['google_maps_api_key']))
+{
+    $google_maps_api_key = $_POST['google_maps_api_key'];
+}
 
 $data = array("organization_name" => $org_name,
               "root_domain" => $domain,
@@ -54,8 +58,9 @@ $data = array("organization_name" => $org_name,
               "footer" => $footer,
               "sources" => $sources,
               "share" => $share,
-	      "status" => "Submitted",
-	      "reviewed" => "N");
+              "google_maps_api_key" => $google_maps_api_key,
+              "status" => "Submitted",
+              "reviewed" => "N");
 
 $data_string = json_encode($data);
 

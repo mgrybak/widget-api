@@ -60,28 +60,9 @@ function handleSubmit(data, user_name){
     // Storing Field Values In Variables
     var org_name = document.getElementById("usr").value;
     var domain = document.getElementById("url").value;
-    var custom = document.getElementById("custom_form").value;
     var gmaps = document.getElementById("gmaps").value;
     var email = document.getElementById("email").value;
     var color = document.getElementById("hex").value;
-
-    if ($("#location").is(":checked")){
-        var location = true;
-    }else{
-        var location = false;
-    }
-
-    if ($("#property").is(":checked")){
-        var property = true;
-    }else{
-        var property = false;
-    }
-
-    if ($("#market").is(":checked")){
-        var market = true;
-    }else{
-        var market = false;
-    }
 
     if ($("#title").is(":checked")){
         var title = true;
@@ -113,33 +94,12 @@ function handleSubmit(data, user_name){
         var share = false;
     }
 
-
     //Check that email is properly formatted
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     
 
     //Choose package
-    var package_option = "";
-    if (location == false && property == false && market == false) {
-        alert("Please choose a visualization package");
-        return;
-    }
-
-    if(location == true){
-        package_option = package_option + "location";
-    }
-
-    if(property == true){
-        package_option = package_option + "^property";
-    }
-
-    if(market == true){
-        package_option = package_option + "^market";
-    }
-
-    if(custom != ""){
-        package_option = package_option + "^" + custom;
-    }
+    var package_option = "corelogic";
 
     // Conditions
     if(!email.match(emailReg)) {
