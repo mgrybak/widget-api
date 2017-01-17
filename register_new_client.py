@@ -137,11 +137,9 @@ options_dict['publisher_id'] = PID
 
 #-------------------------------------------------#
 
-#package_csv = sys.argv[2]
+package_csv = sys.argv[2]
 
-print options_dict
 
-'''
 if __name__ == "__main__":
 	viz_rows = openCSV(package_csv)
 	tracker_import = []
@@ -169,5 +167,5 @@ if __name__ == "__main__":
 	        sys.exit(1)
 	sendToTopic(tracker_import,11738)
 	sendToTopic(prog_api_import,6876)
-'''
+
 

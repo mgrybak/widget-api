@@ -120,7 +120,7 @@ function handleSubmit(data, user_name){
 
     //Choose package
     var package_option = "";
-    if (location == false && property == false && market == false) {
+    if (location == false && property == false && market == false && custom == "") {
         alert("Please choose a visualization package");
         return;
     }
