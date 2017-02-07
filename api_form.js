@@ -117,6 +117,11 @@ function handleSubmit(data, user_name){
     //Check that email is properly formatted
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     
+    //Verify that domain is not blank
+    if (domain == "") {
+        alert("Please enter a valid domain");
+        return;
+    }
 
     //Choose package
     var package_option = "";
