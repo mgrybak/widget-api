@@ -87,7 +87,7 @@ options_dict = {"wid":"", #Edit viz ID
 "sort_field":"",
 "sort_dir":"",
 "app_id":"", #Edit App ID
-"source":"Card Editor",
+"source":"api",
 "single_widget_mode":True,
 "card_id":"", #Edit Card ID
 "context":"SINGLE",
@@ -96,6 +96,7 @@ options_dict = {"wid":"", #Edit viz ID
 "backlink":False,
 "global_no_links":True,
 "theme":"native",
+"theme_dombo":"null",
 "show_header":False,
 "show_footer":False,
 "show_sources":False,
@@ -134,6 +135,8 @@ if SHARE == True:
 #Publisher ID
 options_dict['publisher_id'] = PID
 
+#Theme Combo
+options_dict['theme_combo'] = PUBLISHER_NAME
 
 #-------------------------------------------------#
 
@@ -160,12 +163,12 @@ if __name__ == "__main__":
 	        tracker_import.append(to_tracker)
 	        to_prog = {"title":viz['description'],"widget_name":viz['name'],"widget_id":new_widget_response['id'],"publisher":PUBLISHER_NAME,"pid":PID,"json_widget_options":'{"type":"' + viz['api_topic'] + '", "add-ad-tag":false}',"style":'font:14px/16px arial;color:#339933;',"anchor_text":'More Details | FindTheHome'}
 	        prog_api_import.append(to_prog)
-	        print "Successfully added new visualization for", viz['name']
+	        print "Successfully added new visualization {} for {}".format(new_widget_response['id'],viz['name'])
 	        print ",".join(map(lambda x: '"' + str(x) + '"', [new_widget_response['id'],viz['description'],viz['name'],viz['vid']]))
 	    else:
-	        print "Error forking visualization for", viz['name']
+	        print "Error forking visualization {} for {}".format(new_widget_response['id'],viz['name'])
 	        sys.exit(1)
-	sendToTopic(tracker_import,11738)
-	sendToTopic(prog_api_import,6876)
+	#sendToTopic(tracker_import,11738)
+	#sendToTopic(prog_api_import,6876)
 
 
