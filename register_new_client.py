@@ -148,27 +148,25 @@ if __name__ == "__main__":
 	tracker_import = []
 	prog_api_import = []
 	for viz in viz_rows:
-	    if 'card_id' in getVizInfo(viz).keys():
-	        viz_info = getVizInfo(viz)
-	        
-			#Input new details into options_dict
-	        options_dict['card_id'] = viz_info['card_id']
-	        options_dict['app_id'] = viz_info['app_id']
-	        options_dict['ids'] = [viz_info['listing_ids'][0]]
-	        options_dict['wid'] = viz['vid']
+		if 'card_id' in getVizInfo(viz).keys():
+			viz_info = getVizInfo(viz)
+			options_dict['card_id'] = viz_info['card_id']
+			options_dict['app_id'] = viz_info['app_id']
+			options_dict['ids'] = [viz_info['listing_ids'][0]]
+			options_dict['wid'] = viz['vid']
 
-	        	
-	        new_widget_response = sendVizRequest(viz_info['app_id'],json.dumps(options_dict))
-	        to_tracker = {"title":viz['description'],"widget_name":viz['name'],"widget_id":new_widget_response['id'],"publisher":PUBLISHER_NAME,"pid":PID,"json_widget_options":'{"type":"' + viz['api_topic'] + '", "add-ad-tag":false}',"style":'font:14px/16px arial;color:#339933;',"anchor_text":'More Details | FindTheHome',"date_issued":time.strftime('%Y-%m-%d %H:%M:%S'),"template_widget_id":viz['vid']}
-	        tracker_import.append(to_tracker)
-	        to_prog = {"title":viz['description'],"widget_name":viz['name'],"widget_id":new_widget_response['id'],"publisher":PUBLISHER_NAME,"pid":PID,"json_widget_options":'{"type":"' + viz['api_topic'] + '", "add-ad-tag":false}',"style":'font:14px/16px arial;color:#339933;',"anchor_text":'More Details | FindTheHome'}
-	        prog_api_import.append(to_prog)
-	        print "Successfully added new visualization {} for {}".format(new_widget_response['id'],viz['name'])
-	        print ",".join(map(lambda x: '"' + str(x) + '"', [new_widget_response['id'],viz['description'],viz['name'],viz['vid']]))
-	    else:
-	        print "Error forking visualization {} for {}".format(new_widget_response['id'],viz['name'])
-	        sys.exit(1)
-	#sendToTopic(tracker_import,11738)
-	#sendToTopic(prog_api_import,6876)
+			new_widget_response = sendVizRequest(viz_info['app_id'],json.dumps(options_dict))
+			to_tracker = {"title":viz['description'],"widget_name":viz['name'],"widget_id":new_widget_response['id'],"publisher":PUBLISHER_NAME,"pid":PID,"json_widget_options":'{"type":"' + viz['api_topic'] + '", "add-ad-tag":false}',"style":'font:14px/16px arial;color:#339933;',"anchor_text":'More Details | FindTheHome',"date_issued":time.strftime('%Y-%m-%d %H:%M:%S'),"template_widget_id":viz['vid']}
+			tracker_import.append(to_tracker)
+			to_prog = {"title":viz['description'],"widget_name":viz['name'],"widget_id":new_widget_response['id'],"publisher":PUBLISHER_NAME,"pid":PID,"json_widget_options":'{"type":"' + viz['api_topic'] + '", "add-ad-tag":false}',"style":'font:14px/16px arial;color:#339933;',"anchor_text":'More Details | FindTheHome'}
+			prog_api_import.append(to_prog)
+			print "Successfully added new visualization for", viz['name']
+			print ",".join(map(lambda x: '"' + str(x) + '"', [new_widget_response['id'],viz['description'],viz['name'],viz['vid']]))
+		else:
+			print "Error forking visualization for", viz['name']
+			sys.exit(1)
+
+	sendToTopic(tracker_import,11738)
+	sendToTopic(prog_api_import,6876)
 
 

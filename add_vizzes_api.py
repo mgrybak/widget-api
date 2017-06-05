@@ -8,7 +8,7 @@ import sys, requests, json, csv, time, creds
 GLOBALS
 '''
 SW_URL_TEMPLATE = 'https://www.graphiq.com/w/ajax/save_widget?app_id={0}&options={1}&custom_attributes={{}}&embed_type=1&source=api'
-VIZ_API_URL = 'http://api.graphiq.com/visualizations/'
+VIZ_API_URL = 'https://api.graphiq.com/visualizations/'
 VIZ_API_TOKEN = '56cce9e2c44bdb48410000017f508c60058d4ff46d13216f386de51b'
 HEADERS = {'user-agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'}
 PROG_API_APP_ID = 6876

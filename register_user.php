@@ -78,7 +78,7 @@ curl_setopt_array($curl, array(
   CURLOPT_USERAGENT => $useragent,
   CURLOPT_HTTPHEADER => array(
     "content-type: multipart/form-data",
-    "token: 021db13568dc101bf462a67884dbf685"
+    "token: redacted"
   )
 ));
 
